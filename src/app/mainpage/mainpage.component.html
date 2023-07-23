@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
+      aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+
+        <label for="exampleDataList" class="form-label">Datalist example</label>
+        <!-- <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Select State"> -->
+        <select class="form-control" placeholder="select" (change)="loadcities(state.value)" #state>
+          <option *ngFor="let s of states" value="{{s.id}}">{{s.name}}</option>
+
+
+        </select>
+        <!-- <datalist id="datalistOptions" *ngFor="let s of states">
+
+        </datalist> -->
+
+        <label for="exampleDataList" class="form-label">list example</label>
+        <!-- <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Select City">
+        <datalist id="datalistOptions2">
+          <option value="San Francisco">
+          <option value="New York">
+          <option value="Seattle">
+          <option value="Los Angeles">
+          <option value="Chicago">
+        </datalist> -->
+          
+        <select class="form-control" placeholder="select" #city (change)="loadcollege(clg_name.value)" #clg_name>
+          <option *ngFor="let s of cities" value="{{s.id}}">{{s.name}}</option>
+
+
+        </select>
+
+
+        <label for="exampleDataList" class="form-label"> example</label>
+        <!-- <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Select College Type">
+        <datalist id="datalistOptions">
+          <option value="San Francisco">
+          <option value="New York">
+          <option value="Seattle">
+          <option value="Los Angeles">
+          <option value="Chicago">
+        </datalist> -->
+        
+        <select class="form-control" placeholder="select"  #college (change)="loadCollegeDetail(college.value)">
+          <option *ngFor="let s of colleges" value="{{s.id}}">{{s.clg_name}}</option>
+
+
+        </select>
+        
+    
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<app-india-map [leti]="plet" [log]="plog" [path]="mpath"></app-india-map>

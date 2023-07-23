@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-6">
+
+    <div class="card" style="width: 1; height: 30rem;">
+
+      <div class="card-body">
+        <h3 class="card-title">{{cdetail.clg_name}}</h3>
+        <div class="col-md-8 campus_map" id="campus_map">
+          <div class="row">
+            <div class="col-3">
+              <a (click)="showTour(cdetail.virtual_tour)" >
+                <img src="/assets/assets/images/virtual_tour_icon.png " width="200">
+
+              </a>
+
+            </div>
+
+            <div class="col-3">
+              <a [href]="cdetail.website" target="_blank">
+                <img src="/assets/assets/images/website_icon.png ">
+
+              </a>
+            </div>
+
+            <div class="col-3">
+              <a (click)="showNearBy(cdetail.city_id)" >
+              <img src="/assets/assets/images/train.png " width="200">
+              </a>
+            </div>
+
+            <div class="col-3">
+              <a [href]="cdetail.vr_pics" target="_blank">
+              <img src="/assets/assets/images/instagram.png ">
+              </a>
+            </div>
+           
+            
+
+          </div>
+        </div>
+        <div class="col-md-4 website sethov" id="website">
+
+        </div>
+        <br>
+        <br>
+        <p><b>Degreess:</b> {{cdetail.degree}} </p>
+        <p><b>Facilities : </b> {{cdetail.facilities}} </p>
+        <p><b>Placement : </b> {{cdetail.placement}} </p>
+        <p [innerHTML]="cdetail.cutoff"><b>Cut-Off :</b> </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div >
+      <iframe id="vtourframe" width="90%" height="500" style="border: 0;"  allowfullscreen="allowfullscreen" loading="lazy"></iframe>
+
+      <!-- {{vtour}} -->
+      <!-- aksjdhaksj?E?dhakdjahkj -->
+    </div>
+    <!-- {{cdetail.virtual_tour}} -->
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>X</button>
+  <!-- <button mat-button mat-dialog-close cdkFocusInitial>Ok</button> -->
+</div>

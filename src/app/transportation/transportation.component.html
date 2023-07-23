@@ -1,0 +1,41 @@
+<div class="card">
+    <h5 class="card-header">Nearest Railway Station</h5>
+    <div class="card-body">
+      
+     <ul *ngFor="let r of rs">
+        <a href="{{r.location}}" target="_blank"><li>{{r.station_name}}</li></a>
+        
+      </ul>
+
+      <!-- <ul *ngFor="let b of bs">
+        <a><li>{{b.station_name}}</li></a>
+        
+      </ul>
+
+      <ul *ngFor="let a of s">
+        <a><li>{{a.station_name}}</li></a>
+        
+      </ul> -->
+    </div>
+  </div>
+
+  <div class="card">
+    <h5 class="card-header">Nearest  Bus Stand</h5>
+    <div class="card-body">
+  <ul *ngFor="let b of bs">
+    <a href="{{b.location}}" target="_blank"><li>{{b.station_name}}</li></a>
+    
+  </ul>
+</div>
+</div>
+
+<div class="card">
+  <h5 class="card-header">Nearest  Airport</h5>
+  <div class="card-body">
+
+  <ul *ngFor="let a of s">
+    <a href="{{a.location}}" target="_blank"><li>{{a.station_name}}</li></a>
+    
+  </ul>
+</div>
+</div>
